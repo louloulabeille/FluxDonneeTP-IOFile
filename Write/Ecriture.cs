@@ -5,6 +5,11 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Write
 {
 
+    /// <summary>
+    ///  - TO DO a faire corriger les path et le remplacer par la méthode static PATH.Combine
+    ///  Classe d'écriture de fichier par différence facon Attention au ressource utilisé et temps de traitement selon la classe utilisé
+    /// </summary>
+    ///
     public class Ecriture
     {
         public string Path { get; set; }
@@ -173,6 +178,12 @@ namespace Write
             catch { Console.WriteLine("Erreur lors de l'écriture dans le fichier."); }
         }
 
+
+        /// <summary>
+        /// Attention au temps de traitement et ressource utilisé
+        /// 
+        /// </summary>
+        /// <param name="ligne"></param>
         public void FichierenregistrementRapide(string ligne)
         {
             if (!Directory.Exists(Path))
